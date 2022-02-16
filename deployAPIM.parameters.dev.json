@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "value": "pocApim"
+        },
+        "resourceTags": {
+            "value": {
+                "Environment": "dev",
+                "Project": "poc-apim"
+            }
+        },  
+        "region": {
+            "value": "westeurope"
+        },    
+        "organizationName" : {
+            "value": "Contoso Enterprise"
+        }, 
+        "organizationEmail": {
+            "value": "thotheod@microsoft.com"
+        },
+        "vnetAddressSpace": {
+            "value": "192.168.0.0/22"
+        },
+        "snetDefault": {
+            "value": {
+                "name" : "snetDefault",
+                "submetPrefix": "192.168.0.0/24"
+            }
+        },
+        "snetApim": {
+            "value": {
+                "name": "snet-Apim",
+                "submetPrefix": "192.168.1.0/24"
+            }
+        }
+    }
+}
