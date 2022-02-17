@@ -18,11 +18,11 @@ param organizationEmail string
 ])
 param sku string = 'Developer'
 
-@description('Zone numbers e.g. 1,2,3.')
-param availabilityZones array = [
-  '1'
-  '2'
-]
+// @description('Zone numbers e.g. 1,2,3.')
+// param availabilityZones array = [
+//   '1'
+//   '2'
+// ]
 
 @description('Type of VPN in which the APIM will be deployed in')
 @allowed([
@@ -79,7 +79,7 @@ resource apim 'Microsoft.ApiManagement/service@2021-08-01' = {
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2': 'false'
     }
   }
-  zones: ((length(availabilityZones) == 0) ? [] : availabilityZones)
+  // zones: ((length(availabilityZones) == 0) ? [] : availabilityZones)
 }
 
 
